@@ -18,26 +18,23 @@ def reverse_binary():
 		converting it back to an integer and displays the result to the user.
 	"""
 
-	print 'Please enter an integer between 1 and 1 000 000 000.'
+	print('Please enter an integer between 1 and 1 000 000 000.')
 
 	while True:
 		try:
-			integer = int(raw_input('>> '))
+			integer = int(input('>> '))
 
 			if 1 <= integer <= 1000000000:
 				binary = bin(integer)[2::]
 				reversed_binary = binary[::-1]
 				result = int(reversed_binary, 2)
-				print ('The reverses binary number of %s is %s' % (integer, result))
+				print('The reverses binary number of %s is %s' % (integer, result))
 
 			else:
-				print 'The number is not in the valid range. Please enter a number between 1 and 1 000 000 000'
+				print('The number is not in the valid range. Please enter a number between 1 and 1 000 000 000')
 
 		except ValueError:
-			print 'Thats not a number! Please enter an integer between 1 and 1 000 000 000'
+			print('Thats not a number! Please enter an integer between 1 and 1 000 000 000')
 			continue
-
-		except KeyboardInterrupt:
-			sys.exit(0)
 
 reverse_binary()
